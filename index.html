@@ -3,199 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You - Immigration Survival Guide</title>
+    <title>Thank You for Your Purchase!</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Open Sans', sans-serif;
-            background: linear-gradient(135deg, #f0f9ff 0%, #e6f7ff 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .container {
-            max-width: 600px;
-        }
-        .card {
-            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 50px rgba(30, 58, 138, 0.15);
-            position: relative;
-        }
-        .header {
+        .hero-gradient {
             background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
-            padding: 40px 20px;
-            text-align: center;
-            position: relative;
         }
-        .checkmark {
-            width: 100px;
-            height: 100px;
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 25px;
-            animation: scaleIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        .success-check {
+            width: 80px;
+            height: 80px;
+            animation: scaleCheck 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
         }
-        @keyframes scaleIn {
-            0% { transform: scale(0.2); opacity: 0; }
+        @keyframes scaleCheck {
+            0% { transform: scale(0); opacity: 0; }
+            70% { transform: scale(1.1); opacity: 1; }
             100% { transform: scale(1); opacity: 1; }
         }
-        .content {
-            padding: 40px;
-            text-align: center;
+        .cta-button {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(79, 70, 229, 0.3);
         }
-        .email-icon {
-            font-size: 4rem;
-            color: #3b82f6;
-            margin-bottom: 20px;
-            animation: float 3s ease-in-out infinite;
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-        .title {
-            font-family: 'Merriweather', serif;
-            font-weight: 700;
-            color: #1e3a8a;
-            margin-bottom: 20px;
-            font-size: 2.2rem;
-        }
-        .message {
-            font-size: 1.2rem;
-            line-height: 1.7;
-            color: #334155;
-            margin-bottom: 30px;
-        }
-        .highlight {
-            background: linear-gradient(120deg, #dbeafe 0%, #dbeafe 100%);
-            background-repeat: no-repeat;
-            background-size: 100% 40%;
-            background-position: 0 90%;
-            font-weight: 600;
-        }
-        .signature {
-            margin-top: 40px;
-            padding-top: 30px;
-            border-top: 1px dashed #cbd5e1;
-        }
-        .signature-name {
-            font-weight: 700;
-            color: #1e3a8a;
-            font-size: 1.3rem;
-        }
-        .signature-title {
-            color: #475569;
-            font-style: italic;
-        }
-        .pattern {
-            position: absolute;
-            width: 100%;
-            height: 20px;
-            bottom: 0;
-            background: repeating-linear-gradient(
-                45deg,
-                #1e40af,
-                #1e40af 10px,
-                #1e3a8a 10px,
-                #1e3a8a 20px
-            );
-        }
-        .confetti {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            background-color: #fbbf24;
-            border-radius: 50%;
-            animation: confetti-fall 5s linear infinite;
-        }
-        @keyframes confetti-fall {
-            0% {
-                transform: translateY(-100px) rotate(0deg);
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(100vh) rotate(360deg);
-                opacity: 0;
-            }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 10px rgba(79, 70, 229, 0.4);
         }
     </style>
 </head>
-<body>
-    <div class="container px-4">
-        <div class="card">
-            <div class="header">
-                <div class="checkmark">
-                    <i class="fas fa-check text-white text-4xl"></i>
-                </div>
-                <h1 class="text-3xl md:text-4xl font-bold text-white">Thank You!</h1>
-            </div>
-            
-            <div class="content">
-                <div class="email-icon">
-                    <i class="fas fa-envelope-open-text"></i>
-                </div>
-                
-                <h2 class="title">Your Immigration Survival Guide is on its way</h2>
-                
-                <p class="message">
-                    We've successfully sent your complete package to your email address. 
-                    <span class="highlight">Please check your inbox</span> (and spam folder, just in case) 
-                    to access all the valuable resources you've purchased.
-                </p>
-                
-                <p class="message">
-                    Inside, you'll find the <span class="highlight">127-page survival guide</span>, 
-                    exclusive podcast access, and all the bonus materials to help you navigate 
-                    the immigration journey with confidence.
-                </p>
-                
-                <div class="signature">
-                    <p class="signature-name">Maria Rodriguez</p>
-                    <p class="signature-title">Author, Immigration Survival Guide</p>
-                </div>
-            </div>
-            
-            <div class="pattern"></div>
+<body class="font-sans antialiased text-gray-800 bg-gray-50 min-h-screen">
+    <!-- Digistore24 Trusted Badge -->
+    <div class="bg-white py-3 shadow-sm">
+        <div class="container mx-auto px-4">
+            <!-- Begin of Digistore24 Trusted Badge Code -->
+            <script type="text/javascript" src="https://www.digistore24.com/trusted-badge/39914/Tla7G4XuJa7Jolw/thankyoupage"></script>
+            <!-- End of Digistore24 Trusted Badge Code -->
         </div>
     </div>
-    
-    <script>
-        // Create confetti effect
-        function createConfetti() {
-            const colors = ['#fbbf24', '#ef4444', '#10b981', '#3b82f6', '#8b5cf6'];
-            const container = document.querySelector('body');
+
+    <!-- Thank You Hero Section -->
+    <section class="hero-gradient text-white py-16 px-4">
+        <div class="container mx-auto max-w-4xl text-center">
+            <div class="flex justify-center mb-6">
+                <div class="success-check bg-green-500 rounded-full flex items-center justify-center">
+                    <i class="fas fa-check text-white text-4xl"></i>
+                </div>
+            </div>
+            <h1 class="text-3xl md:text-4xl font-bold mb-6">Thank You for Your Purchase!</h1>
+            <p class="text-xl max-w-2xl mx-auto mb-8">
+                Your order has been successfully processed. We're preparing your resources now.
+            </p>
+        </div>
+    </section>
+
+    <!-- Content Delivery Information -->
+    <section class="py-12 bg-white px-4">
+        <div class="container mx-auto max-w-4xl">
+            <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 md:p-8">
+                <h2 class="text-2xl font-bold text-blue-800 mb-4">Your Next Steps</h2>
+                
+                <div class="space-y-6">
+                    <div class="flex items-start">
+                        <div class="bg-blue-100 text-blue-600 rounded-full p-3 mr-4 flex-shrink-0">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold mb-1">Check Your Email</h3>
+                            <p class="text-gray-700">
+                                <strong>Your items will be sent to your email inbox by Digistore24</strong> within the next few minutes. 
+                                If you don't see them, please check your spam folder.
+                            </p>
+                            <p class="mt-2 text-sm text-gray-600">
+                                Need help? Contact Digistore24 support at: 
+                                <a href="mailto:helpdesk@digistore24.com" class="text-blue-600 hover:underline">helpdesk@digistore24.com</a>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="bg-blue-100 text-blue-600 rounded-full p-3 mr-4 flex-shrink-0">
+                            <i class="fas fa-lock text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold mb-1">Secure Payment Processing</h3>
+                            <p class="text-gray-700">
+                                <strong>Your payment was handled securely by Digistore24</strong> using bank-grade encryption. 
+                                Your financial information is protected throughout the entire transaction process.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="bg-blue-100 text-blue-600 rounded-full p-3 mr-4 flex-shrink-0">
+                            <i class="fas fa-download text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold mb-1">Access Your Resources</h3>
+                            <p class="text-gray-700">
+                                After receiving your email, you'll be able to download all purchased materials immediately. 
+                                The guide is in PDF format, and you'll get access to our private resource portal.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community CTA -->
+    <section class="py-16 px-4">
+        <div class="container mx-auto max-w-3xl text-center">
+            <div class="bg-white rounded-xl shadow-lg p-8">
+                <div class="flex justify-center mb-6">
+                    <div class="bg-green-100 text-green-600 rounded-full p-5">
+                        <i class="fab fa-whatsapp text-4xl"></i>
+                    </div>
+                </div>
+                
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Join Our Community</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto mb-8">
+                    Connect with other immigrants, share experiences, and get ongoing support in our private WhatsApp group.
+                </p>
+                
+                <a href="https://chat.whatsapp.com/JZAhpNDCrwuLMCqOX5kGmw" target="_blank" 
+                   class="cta-button inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-8 rounded-lg text-lg">
+                    <i class="fab fa-whatsapp mr-2"></i> Join WhatsApp Group
+                </a>
+                
+                <p class="mt-6 text-gray-500 text-sm">
+                    You'll receive valuable insights, updates, and support from our growing community
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class="py-12 bg-gray-100 px-4">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center mb-10">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Need Help?</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    We're here to assist you with any questions about your purchase or resources
+                </p>
+            </div>
             
-            for (let i = 0; i < 50; i++) {
-                const confetti = document.createElement('div');
-                confetti.className = 'confetti';
-                confetti.style.left = Math.random() * 100 + 'vw';
-                confetti.style.animationDelay = Math.random() * 5 + 's';
-                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-                confetti.style.width = Math.random() * 10 + 5 + 'px';
-                confetti.style.height = confetti.style.width;
-                container.appendChild(confetti);
-            }
-        }
-        
-        // Create confetti on page load
-        window.onload = createConfetti;
-        
-        // Animate the email icon
-        const icon = document.querySelector('.email-icon');
-        setInterval(() => {
-            icon.style.animation = 'none';
-            setTimeout(() => {
-                icon.style.animation = 'float 3s ease-in-out infinite';
-            }, 10);
-        }, 6000);
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 text-blue-600 rounded-full p-3 mr-4">
+                            <i class="fas fa-question-circle text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Product Support</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        For questions about the Immigration Survival Guide or bonus materials
+                    </p>
+                    <a href="mailto:support@immigrationsurvival.com" class="inline-block bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-6 rounded-lg">
+                        Contact Support
+                    </a>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 text-blue-600 rounded-full p-3 mr-4">
+                            <i class="fas fa-credit-card text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Payment Support</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        For questions about your payment or order status
+                    </p>
+                    <a href="mailto:helpdesk@digistore24.com" class="inline-block bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-6 rounded-lg">
+                        Contact Digistore24
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-gray-900 text-white text-center">
+        <div class="container mx-auto px-4">
+            <p class="mb-4">© 2023 Immigration Survival Guide. All rights reserved.</p>
+            <p class="text-gray-400 text-sm">
+                Your payment was securely processed by Digistore24. All digital products will be delivered to your email.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation for elements when they come into view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeIn');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
     </script>
 </body>
 </html>
